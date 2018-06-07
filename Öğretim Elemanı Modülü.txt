@@ -1,0 +1,5 @@
+dogan	kargi	12345	bilgisayar
+kali	gurkahraman	54321	bilgisayar
+beyza	sak	98765	makine
+melis	ak	56789	elektrik
+hidayet	takci	92876	bilgisayar

@@ -1,0 +1,50 @@
+ali	mert	123	bilgisayar	2
+matematik	16	60	42.4
+kimya	45	64	56.4
+sinyal	43	56	50.8
+isg	56	34	42.8
+edebiyat	67	56	60.4
+null
+null
+null
+null
+ayse	duru	321	makina	4
+matematik	23	56	42.8
+fizik	21	23	22.2
+kimya	34	50	43.6
+mimari	23	40	33.2
+edebiyat	78	56	64.8
+ingilizce	67	56	60.4
+programlama	45	45	45
+null
+null
+mehmet	ak	56	insaat	1
+matematik	15	45	33
+fizik	65	45	53
+kimya	67	54	59.2
+mimari	34	67	53.8
+sinyal	45	87	70.2
+isg	67	43	52.6
+edebiyat	87	34	55.2
+ingilizce	34	67	53.8
+programlama	43	87	69.4
+halit	altun	50	bilgisayar	3
+fizik	45	76	63.6
+mimari	34	67	53.8
+sinyal	45	67	58.2
+programlama	34	45	40.6
+null
+null
+null
+null
+null
+fatma	goz	88	elektrik	2
+matematik	78	43	57
+fizik	8	75	48.2
+kimya	23	56	42.8
+null
+null
+null
+null
+null
+null

@@ -1,0 +1,50 @@
+ali	mert	123	bilgisayar	2
+matematik
+kimya
+sinyal
+isg
+edebiyat
+null
+null
+null
+null
+ayse	duru	321	makina	4
+matematik
+fizik
+kimya
+mimari
+edebiyat
+ingilizce
+programlama
+null
+null
+mehmet	ak	56	insaat	1
+matematik
+fizik
+kimya
+mimari
+sinyal
+isg
+edebiyat
+ingilizce
+programlama
+halit	altun	50	bilgisayar	3
+fizik
+mimari
+sinyal
+programlama
+null
+null
+null
+null
+null
+fatma	goz	88	elektrik	2
+matematik
+fizik
+kimya
+null
+null
+null
+null
+null
+null

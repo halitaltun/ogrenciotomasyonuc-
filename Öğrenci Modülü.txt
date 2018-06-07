@@ -1,0 +1,5 @@
+ali	mert	123	bilgisayar	2
+ayse	duru	321	makina	4
+mehmet	ak	56	insaat	1
+halit	altun	50	bilgisayar	3
+fatma	goz	88	elektrik	2

@@ -1,0 +1,11 @@
+Ad:halit
+Soyad:altun
+Numara:50
+Bolum:bilgisayar
+Sinif:3
+
+DERS ADI	   VIZE NOTU	FINAL NOTU	ORTALAMA	HARF	DURUM
+fizik		      45	    76		63.6		CB	Gecti
+mimari		      34	    67		53.8		CC	Gecti
+sinyal		      45	    67		58.2		CB	Gecti
+programlama	      34	    45		40.6		DC	Sartli Gecti

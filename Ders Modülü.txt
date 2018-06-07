@@ -1,0 +1,9 @@
+matematik	4	4
+fizik	4	4
+kimya	3	3
+mimari	4	3.5
+sinyal	3	3
+isg	2	2
+edebiyat	2	2
+ingilizce	2	2
+programlama	4	3.5
