@@ -40,36 +40,6 @@ void ogrenciisleriotomasyonu()
 		goto A; 
 	} 
 }
-//Öðrenci bilgilerinin kayýt edildiði fonksiyon 
-void ogrencikayit(){
-	int N;
-	
-	ofstream dosya; //ofstream sýnýfýndan bir nesne oluþturduk.
-	dosya.open("Öðrenci Modülü.txt"); //Öðrenci Modülü.txt isimli bir dosya açtýk.	
-    cout << "Kaç Adet Öðrenci Gireceksiniz: "; 
-    cin >> N;
-    for (int i = 0; i < N; i++) 
-    { 
-        cout << i + 1 << ". Öðrencinin Adýný giriniz: "; 
-        cin >> ogrenciadi; 
-        cout << i + 1 << ". Öðrencinin Soyadýný giriniz: "; 
-        cin >> ogrencisoyadi;
-        cout << i + 1 << ". Öðrencinin Okul numarasýný giriniz: "; 
-        cin >> ogrencino;
-		cout << i + 1 << ". Öðrencinin Bölümü: "; 
-        cin >> ogrencibolum; 
-		cout << i + 1 << ". Öðrencinin Sýnýfý: "; 
-        cin >> ogrencisinif;
-		
-		dosya <<ogrenciadi<<"\t"; //Burada oluþturduðumuz nesneyi cout gibi kullandýk ve dosyaya bilgileri kaydektik.
-		dosya <<ogrencisoyadi<<"\t";
-		dosya <<ogrencino<<"\t";
-		dosya <<ogrencibolum<<"\t";
-		dosya <<ogrencisinif<<endl; 
-    } 
-	dosya.close(); //dosyayý kapattýk.
-	ogrenciisleriotomasyonu();	
-}
 //Öðrenci Modülü dosyasýnýn satýr sayýsýný hasaplayan fonksiyon
 int satirsayisi(){
 	int satirsayisi=0;
@@ -87,10 +57,57 @@ int satirsayisi(){
   	}
 	return satirsayisi;
 }
+//Öðrenci bilgilerinin kayýt edildiði fonksiyon 
+void ogrencikayit(){
+	int N;
+	
+	ifstream dosya;
+	ofstream dosya1;
+	dosya.open("Öðrenci Modülü.txt");
+	dosya1.open("Öðrenci Modülü1.txt"); 
+	for(int j=1; j<satirsayisi(); j++){
+		dosya>>ogrenciadi>>ogrencisoyadi>>ogrencino>>ogrencibolum>>ogrencisinif;  
+		dosya1 <<ogrenciadi<<"\t"; //Burada oluþturduðumuz nesneyi cout gibi kullanýyoruz.
+		dosya1 <<ogrencisoyadi<<"\t";
+		dosya1 <<ogrencino<<"\t";
+		dosya1 <<ogrencibolum<<"\t";
+		dosya1 <<ogrencisinif<<endl; 
+	}
+
+    cout << "Kaç Adet Öðrenci Gireceksiniz: "; 
+    cin >> N;
+    for (int i = 0; i < N; i++) 
+    { 
+        cout << i + 1 << ". Öðrencinin Adýný giriniz: "; 
+        cin >> ogrenciadi; 
+        cout << i + 1 << ". Öðrencinin Soyadýný giriniz: "; 
+        cin >> ogrencisoyadi;
+        cout << i + 1 << ". Öðrencinin Okul numarasýný giriniz: "; 
+        cin >> ogrencino;
+		cout << i + 1 << ". Öðrencinin Bölümü: "; 
+        cin >> ogrencibolum; 
+		cout << i + 1 << ". Öðrencinin Sýnýfý: "; 
+        cin >> ogrencisinif;
+		
+		dosya1 <<ogrenciadi<<"\t"; //Burada oluþturduðumuz nesneyi cout gibi kullandýk ve dosyaya bilgileri kaydektik.
+		dosya1 <<ogrencisoyadi<<"\t";
+		dosya1 <<ogrencino<<"\t";
+		dosya1 <<ogrencibolum<<"\t";
+		dosya1 <<ogrencisinif<<endl; 
+    } 
+	
+	dosya.close();//dosyayý kapattýk.
+	dosya1.close();//dosyayý kapattýk.
+
+	remove("Öðrenci Modülü.txt");
+	rename("Öðrenci Modülü1.txt","Öðrenci Modülü.txt");
+	ogrenciisleriotomasyonu();	
+}
+
 //Öðrenciyi numarasýna göre arayan fonksiyon
 void ogrencinumarasinagorearama(){
 	int arananno, kontrol=0, secenek;
-	
+ 	
 	A:
 	cout<<"Aradýðýnýz Öðrencinin Numarasýný Giriniz: ";
 	cin>>arananno;
@@ -367,8 +384,7 @@ void ogrencibilgileriduzeltme(){
 
 	remove("Öðrenci Modülü.txt");
 	rename("Öðrenci Modülü1.txt","Öðrenci Modülü.txt");
-	
-	
+		
 	if(kontrol==0){
 		cout<<"Bu Numarada Öðrenci Bulunmamaktadýr!"<<endl;
 	}
@@ -442,8 +458,18 @@ int satirsayisi1(){
 void ogretimelemanikayit(){
 	int N, secenek;
 	
-	ofstream dosya; //ofstream sýnýfýndan bir nesne oluþturduk.
-	dosya.open("Öðretim Elemaný Modülü.txt"); //Öðretim Elemaný Modülü.txt isimli bir dosya açtýk.	
+	ifstream dosya; //ofstream sýnýfýndan bir nesne oluþturduk.
+	ofstream dosya1;
+	dosya.open("Öðretim Elemaný Modülü.txt"); //Öðretim Elemaný Modülü.txt isimli bir dosya açtýk.
+	dosya1.open("Öðretim Elemaný Modülü1.txt"); 
+	for(int j=1; j<satirsayisi1(); j++){
+		dosya>>ogretimelemaniadi>>ogretimelemanisoyadi>>ogretimelemanisicilno>>ogretimelemanibolum;  
+		dosya1 <<ogretimelemaniadi<<"\t"; //Burada oluþturduðumuz nesneyi cout gibi kullanýyoruz.
+		dosya1 <<ogretimelemanisoyadi<<"\t";
+		dosya1 <<ogretimelemanisicilno<<"\t";
+		dosya1 <<ogretimelemanibolum<<endl; 
+	}
+	
     cout << "Kaç Adet Öðretim Elemaný Gireceksiniz: "; 
     cin >> N; 
     for (int i = 0; i < N; i++) 
@@ -457,12 +483,18 @@ void ogretimelemanikayit(){
 		cout << i + 1 << ". Öðretim Elemaný Bölümü: "; 
         cin >> ogretimelemanibolum; 
 		
-		dosya <<ogretimelemaniadi<<"\t"; //Burada oluþturduðumuz nesneyi cout gibi kullanýyoruz.
-		dosya <<ogretimelemanisoyadi<<"\t";
-		dosya <<ogretimelemanisicilno<<"\t";
-		dosya <<ogretimelemanibolum<<endl;
+		dosya1 <<ogretimelemaniadi<<"\t"; //Burada oluþturduðumuz nesneyi cout gibi kullanýyoruz.
+		dosya1 <<ogretimelemanisoyadi<<"\t";
+		dosya1 <<ogretimelemanisicilno<<"\t";
+		dosya1 <<ogretimelemanibolum<<endl;
 	}
-	dosya.close(); //dosyayý kapattýk.
+	
+	dosya.close();
+	dosya1.close();
+
+	remove("Öðretim Elemaný Modülü.txt");
+	rename("Öðretim Elemaný Modülü1.txt","Öðretim Elemaný Modülü.txt");
+	
 	ogrenciisleriotomasyonu();	
 } 
 //Öðretim elemaný arama fonksiyonu
@@ -673,8 +705,17 @@ int satirsayisi2(){
 void derskayit(){
 	int N;
 	
-	ofstream dosya; //ofstream sýnýfýndan bir nesne oluþturduk.
-	dosya.open("Ders Modülü.txt"); //Ders Modülü.txt isimli bir dosya açtýk.	
+	ifstream dosya; //ofstream sýnýfýndan bir nesne oluþturduk.
+	dosya.open("Ders Modülü.txt"); //Ders Modülü.txt isimli bir dosya açtýk.
+	ofstream dosya1;
+	dosya1.open("Ders Modülü1.txt"); 
+	for(int j=1; j<satirsayisi2(); j++){
+		dosya>>dersadi>>derssaat>>derskredi; 
+		dosya1 <<dersadi<<"\t"; //Burada oluþturduðumuz nesneyi cout gibi kullanýyoruz.
+		dosya1 <<derssaat<<"\t";
+		dosya1 <<derskredi<<endl;
+	}
+	
     cout << "Kaç Adet Ders Gireceksiniz: "; 
     cin >> N; 
     for (int i = 0; i < N; i++) 
@@ -686,11 +727,16 @@ void derskayit(){
         cout << i + 1 << ". Ders Kredisini giriniz: "; 
         cin >> derskredi;
 		
-		dosya <<dersadi<<"\t"; //Burada oluþturduðumuz nesneyi cout gibi kullanýyoruz.
-		dosya <<derssaat<<"\t";
-		dosya <<derskredi<<endl;
+		dosya1 <<dersadi<<"\t"; //Burada oluþturduðumuz nesneyi cout gibi kullanýyoruz.
+		dosya1 <<derssaat<<"\t";
+		dosya1 <<derskredi<<endl;
 	}
-	dosya.close(); //dosyayý kapattýk.
+	
+	dosya.close();
+	dosya1.close();
+
+	remove("Ders Modülü.txt");
+	rename("Ders Modülü1.txt","Ders Modülü.txt");
 	ogrenciisleriotomasyonu();	
 }
 //Ders bilgilerinin güncellendiði fonksiyon
@@ -1198,7 +1244,7 @@ void notgirismodulu(){
 
 int main()
 {
-	system("color F0");
+	//system("color F0");
 	setlocale(LC_ALL, "Turkish"); //Türkçe karakterler için kullandýk.
 	ogrenciisleriotomasyonu();
 }
